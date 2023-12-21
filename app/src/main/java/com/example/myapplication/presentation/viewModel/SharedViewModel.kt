@@ -20,9 +20,9 @@ import com.example.myapplication.utils.DataState
 import com.example.myapplication.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -49,7 +49,6 @@ class SharedViewModel @Inject constructor(
 
     //Se utiliza para almacenar una transaccion seleccionada
     lateinit var transactionSelect: AuthorizationDataEntity
-    lateinit var  annulmentResponseData: ResponseAnnulment
 
     fun authorizeTransaction(request: AuthorizationDataEntity) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -96,6 +95,7 @@ class SharedViewModel @Inject constructor(
             }
         }
     }
+
 
     fun postAuthorization(authorizationKey: String, authorizationRequest: RequestAuthorization) {
         authorizationUseCase(authorizationKey, authorizationRequest).onEach { resource ->
