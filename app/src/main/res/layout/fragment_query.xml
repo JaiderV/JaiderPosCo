@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.fragments.FragmentQuery">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="356dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/gotic"
+        android:text="¿Son correctos los detalles de tu transacción?"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotic"
+        android:text="¿Desea anular la transacción?"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutQuery" />
+
+    <Button
+        android:id="@+id/cancelQuery"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/botones_home"
+        android:fontFamily="@font/gotic"
+        android:text="Cancelar"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/AnullmentTransaction"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="Anular"
+        android:fontFamily="@font/gotic"
+        android:textSize="18dp"
+        android:background="@drawable/botones_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/imgcco2" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/colorescco" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="268dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logocco" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutQuery"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            <TextView
+                android:id="@+id/textViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID: "
+                android:textStyle="bold"
+                android:layout_margin="5dp" />
+            <TextView
+                android:id="@+id/textViewCommerceCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Codigo de comercio: "
+                android:textStyle="bold"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/textViewTerminalCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terminal: "
+                android:textStyle="bold"
+                android:layout_margin="5dp" />
+            <TextView
+                android:id="@+id/textViewAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monto: "
+                android:textStyle="bold"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/textViewCardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarjeta: "
+                android:textStyle="bold"
+                android:layout_margin="5dp" />
+            <TextView
+                android:id="@+id/textViewReceiptId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de recibo: "
+                android:textStyle="bold"
+                android:layout_margin="5dp" />
+            <TextView
+                android:id="@+id/textViewRrn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RRN: "
+                android:textStyle="bold"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

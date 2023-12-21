@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.myapplication.presentation.fragments.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentAuthorizationForm"
+            app:destination="@id/fragmentAuthorizationForm" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentAnullment"
+            app:destination="@id/fragmentAnullment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentChooseTrxList"
+            app:destination="@id/fragmentChooseTrxList" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAuthorizationForm"
+        android:name="com.example.myapplication.presentation.fragments.FragmentAuthorizationForm"
+        android:label="fragment_authorization_form"
+        tools:layout="@layout/fragment_authorization_form" />
+    <fragment
+        android:id="@+id/fragmentAnullment"
+        android:name="com.example.myapplication.presentation.fragments.FragmentAnullment"
+        android:label="fragment_anullment"
+        tools:layout="@layout/fragment_anullment" >
+        <action
+            android:id="@+id/action_fragmentAnullment_to_fragmentQuery"
+            app:destination="@id/fragmentQuery" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentQuery"
+        android:name="com.example.myapplication.presentation.fragments.FragmentQuery"
+        android:label="fragment_query"
+        tools:layout="@layout/fragment_query" >
+        <action
+            android:id="@+id/action_fragmentQuery_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTransactionList"
+        android:name="com.example.myapplication.presentation.fragments.FragmentTransactionList"
+        android:label="fragment_transaction_list"
+        tools:layout="@layout/fragment_transaction_list" />
+    <fragment
+        android:id="@+id/fragmentChooseTrxList"
+        android:name="com.example.myapplication.presentation.fragments.FragmentChooseTrxList"
+        android:label="fragment_choose_trxlist"
+        tools:layout="@layout/fragment_choose_trxlist" >
+        <action
+            android:id="@+id/action_fragmentChooseTrxList_to_fragmentTransactionList"
+            app:destination="@id/fragmentTransactionList" />
+    </fragment>
+</navigation>
